@@ -1,7 +1,7 @@
 --// Anomic Script, old and buggy could use a rewrite entirely i admit. - H4#0321
 --// Note the FE character features that were merged from "alwayswin" were actually from infinite yield anomic, I didn't know but credits go to them.
 
-local mainName = "Anomiss L" 
+local mainName = "Anomic L" 
 if game:GetService("CoreGui"):FindFirstChild(mainName) then
     game.CoreGui[mainName]:Destroy()
 end
@@ -11,7 +11,7 @@ hookfunction(error, function(string)
 end)
 
 -- Library
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/HELLLO1073/Anomiss/main/Global/AnomissLiteLib.lua"))()
+local library = loadstring(game:HttpGet("https://cmdblox.github.io/Anomic-L/scripts/anomicllib.lua"))()
 local Main = library.new(mainName)
 
 -- // Tabs
